@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Calendrier anniversaire</title> <!-- apparait dans l'onglet -->
+		<!-- Latest compiled and minified CSS -->
+		<link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script data-require="angular-route@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-route.js"></script>
+		<script data-require="ui-bootstrap@*" data-semver="0.13.3" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.3/ui-bootstrap.min.js"></script>
+		<link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
+		<!-- jquery, moment, and angular have to get included before fullcalendar -->
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+		<script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+		<script type="text/javascript" src="bower_components/fullcalendar/dist/lang/fr.js"></script>
+		<script type="text/javascript" src="bower_components/fullcalendar/dist/gcal.js"></script>
+		<script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+		<script src="app.js"></script> 
+		<script src="node_modules/lodash/lodash.js"></script>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body ng-app="myApp">
+		<nav class="navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#/">App anniversaire</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li dropdown>
+						<a href="#" dropdown-toggle>Liens
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/anniversaire">anniversaire</a></li>
+							<li><a href="#/repertoire">repertoire</a></li>
+							<li><a href="#/nouveauContact">nouveau contact</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div ng-view></div>
+
+		<!-- Main App JS -->
+		<script src="app/repertoire/repertoireCtrl.js"></script>
+		<script src="app/calendrier/calendrierCtrl.js"></script>
+		<script src="app/contact/contactCtrl.js"></script>
+		<script src="app/nouveauContact/nouveauContactCtrl.js"></script>
+	</body>
+</html>
+

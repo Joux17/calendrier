@@ -1,0 +1,14 @@
+<div class="container">
+	<br/>
+	<h1 class="section-title">Répertoire</h1>
+
+	<div ng-repeat="(k,v) in repertoireCtrl.groupedContacts">
+		<h2 class="uppercase">{{k}}</h2>
+		<ul>
+			<li ng-repeat="contact in v" ng-click="repertoireCtrl.ouvrirContact(contact.id)" class="capitalize">
+				{{contact.nom}} {{contact.prenom}}
+			</li>
+		</ul>
+
+	</div>	
+</div>
