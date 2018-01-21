@@ -34,6 +34,7 @@ angular.module('myApp')
       var birthday = {};
       birthday.title = contact.nom;
       birthday.start = formatterDate(contact.anniversaire);
+      birthday.url="#/contact/"+contact.id;
       events.push(birthday);
     });
   }
@@ -51,6 +52,7 @@ angular.module('myApp')
   //    {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
   //var events=
   //contient les données qui vont etre affichées dans le calendrier
-	self.eventSources = [events];
+  self.eventSources = [events];
+  
 
 });

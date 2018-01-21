@@ -12,3 +12,15 @@ body{
 .capitalize{
 	text-transform: capitalize;
 }
+
+.photo-contact{
+	padding-bottom: 10px; 
+}
+
+.p-b-10{
+	padding-bottom: 10px;
+}
+
+.w-100 {
+	width: 100%;
+}

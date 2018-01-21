@@ -2,12 +2,23 @@
 	<h1 class="capitalize">{{contactCtrl.contact.nom}} {{contactCtrl.contact.prenom}} 
 		<span ng-bind-html="contactCtrl.findSexe(contactCtrl.contact.sexe)"></span>
 	</h1>
-	<button ng-click="contactCtrl.supprimerUtilisateur()">Supprimer</button>
 
-	<div><i class="material-icons">cake</i> : {{contactCtrl.contact.dateAnniversaire | date :'dd/MM/yyyy'}}</div>
-	<div><i class="material-icons">email</i> : {{contactCtrl.contact.email}}</div>
-	<div><i class="material-icons">phone_android</i> : {{contactCtrl.contact.telephone}}</div>
-	<div><i class="material-icons">home</i> : {{contactCtrl.contact.adresse}}
-	<div><i class="material-icons">comment</i> : {{contactCtrl.contact.commentaire}}
+	<div class="row">
+		<div class="p-b-10 col-md-2">
+			<img class="w-100" src="http://lorempixel.com/200/300/people/" type="" alt="photo de profil">
+		</div>
+
+		<div class="col-md-10">
+			<div><i class="material-icons">cake</i> : {{contactCtrl.contact.dateAnniversaire | date :'dd/MM/yyyy'}}</div>
+			<div><i class="material-icons">email</i> : {{contactCtrl.contact.email}}</div>
+			<div><i class="material-icons">phone_android</i> : {{contactCtrl.contact.telephone}}</div>
+			<div><i class="material-icons">home</i> : {{contactCtrl.contact.adresse}}</div>
+			<div><i class="material-icons">comment</i> : {{contactCtrl.contact.commentaire}}</div>
+		</div>
+
+	</div>
+	
+	<button ng-click="contactCtrl.majUtilisateur()">Modifier</button>
+	<button ng-click="contactCtrl.supprimerUtilisateur()">Supprimer</button>
 
 </div>

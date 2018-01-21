@@ -20,6 +20,11 @@ angular.module('myApp')
 		});
 	};
 
+	self.majUtilisateur = function(){
+		//TODO : appeler fenetre nouveau contact avec données envoyées
+		
+	};
+
 	self.findSexe = function(sexe){
 		if(sexe ==="M"){
 			return $sce.trustAsHtml('&#9794;');
